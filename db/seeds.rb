@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+
+user = User.create(email: "batman@dc.com", password: "123456", name: "Batman", location: "Rødovre")
+pet = Pet.new(name: "Big Pete", species: "elephant", age: 43, description: "Super playful elephant")
+pet.user = user
+pet.save
+
+user1 = User.create(email: "emilio@dc.com", password: "123456", name: "emilio", location: "Rødovre")
+pet1 = Pet.new(name: "tommy", species: "dog", age: 3, description: "Super playful dog")
+pet1.user = user1
+pet1.save
+
+user2 = User.create(email: "eugenia@dc.com", password: "123456", name: "eugenia", location: "Bogota")
+pet2 = Pet.new(name: "michifu", species: "cat", age: 1, description: "Super playful cat")
+pet2.user = user2
+pet2.save
