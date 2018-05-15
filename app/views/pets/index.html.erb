@@ -1,15 +1,9 @@
 <h1>Pets Index</h1>
-
 <div class="container">
   <div class="row">
     <% @pets.each do |pet| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card text-center">
-           <p><%= pet.name %></p>
-           <p><%= pet.description %></p>
-           <p><%= pet.age %></p>
-           <p><%= pet.user.name %></p>
-        </div>
+        <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
       </div>
     <% end %>
   </div>
