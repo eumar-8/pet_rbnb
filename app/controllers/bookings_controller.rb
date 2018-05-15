@@ -1,6 +1,4 @@
 class BookingsController < ApplicationController
-  def new
-  end
 
   def create
     @pet = Pet.find(params[:pet_id])
