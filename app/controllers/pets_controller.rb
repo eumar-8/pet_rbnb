@@ -1,5 +1,5 @@
 class PetsController < ApplicationController
-  before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
+  before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   def index
     @pets = Pet.all
@@ -7,6 +7,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -14,9 +15,9 @@ class PetsController < ApplicationController
   end
 
   def create
-    @pet = Pet.new(cocktail_params)
+    @pet = Pet.new(pet_params)
     if @pet.save
-      redirect_to cocktail_path(@pet)
+      redirect_to pet_path(@pet)
     else
       render :new
     end
@@ -27,8 +28,8 @@ class PetsController < ApplicationController
   end
 
   def update
-    @pet.update(cocktail_params)
-    redirect_to cocktail_path(@pet)
+    @pet.update(pet_params)
+    redirect_to pet_path(@pet)
   end
 
   def destroy

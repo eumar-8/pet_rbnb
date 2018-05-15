@@ -1,2 +1,38 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+
+<div class="container pet_container">
+      <div class="pet_picture">
+        Picture
+      </div>
+
+      <div class="pet_attributes">
+          <h2><%= @pet.name %></h2>
+        <ul class="list-unstyled">
+          <li><%= @pet.species.capitalize %></li>
+          <li>Is <%= @pet.age %> years old</li>
+          <li>Belongs to <%= @pet.user.name %></li>
+          <li>Lives in <%= @pet.user.location %></li>
+        </ul>
+      </div>
+
+    <div class="pet_description">
+      <p><%= @pet.description %></p>
+    </div>
+
+    <div class="pet_booking_box">
+      <h2>Schedule</h2>
+      <h4>DKK 400</h4><br>
+
+        <%= simple_form_for([@pet, @booking], url: pet_bookings_path(@pet), method: :post) do |f| %>
+<%= f.input :date_from, label: "Check-in", as: :string, input_html: { data: {provide: "datepicker"} }  %>
+<%= f.input :date_to, label: "Check-in", as: :string, input_html: { data: {provide: "datepicker"} }  %>
+<br>
+          <div class="form-actions">
+            <%= f.button :submit, "Book", class: "btn btn-success" %>
+          </div>
+        <% end %>
+    </div>
+
+</div> <!-- container -->
+
+
+

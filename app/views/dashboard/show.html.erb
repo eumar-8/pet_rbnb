@@ -1,0 +1,14 @@
+<h1>Dashboard#show</h1>
+<p>Find me in app/views/dashboard/show.html.erb</p>
+
+
+
+<% @user.bookings.each do |booking|%>
+  <%= booking.pet.name %>
+  <%= booking.pet.species %>
+<br>
+  From: <%= booking.date_from %><br>
+  To: <%= booking.date_to %>
+
+  <br><br>
+<% end %>

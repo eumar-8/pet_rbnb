@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.3'
 
+gem 'bootstrap-datepicker-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'figaro'
