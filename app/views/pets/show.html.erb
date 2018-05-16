@@ -20,7 +20,7 @@
 
     <div class="pet_booking_box">
       <h2>Schedule</h2>
-      <h4>DKK 400</h4><br>
+      <h4>DKK <%= @pet.price %> per day</h4>
 
         <%= simple_form_for([@pet, @booking], url: pet_bookings_path(@pet), method: :post) do |f| %>
 <%= f.input :date_from, label: "Check-in", as: :string, input_html: { data: {provide: "datepicker"} }  %>

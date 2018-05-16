@@ -5,6 +5,8 @@ class Pet < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :age, presence: true
+  validates :price, presence: true
+
   validates :species, presence: true, inclusion: {in: %w(cat dog elephant fish hamster giraffe monkey snake spider)}
 
 end
