@@ -20,14 +20,14 @@
 
 <div class="container">
   <div class="row">
-    <div class="card_design">
     <% @pets.each do |pet| %>
       <div class="col-xs-12 col-sm-4">
         <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
       </div>
     <% end %>
-    </div>
+
   </div>
 </div>
+
 <br><br>
 <%= link_to "Add your pet", new_pet_path, class: "btn btn-info" %>
