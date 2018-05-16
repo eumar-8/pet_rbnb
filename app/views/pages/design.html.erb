@@ -1,13 +1,19 @@
-<h1>Components Design</h1>
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path("dogs-background.jpg") %>);">
   <div class="banner-content">
-    <h1>ALL THE PET LOVE YOU CAN HANDLE</h1>
-    <p>Learn to code with us in Berlin</p>
+
+   <h1> ALL THE PETS LOVE YOU CAN HANDLE</h1>
     <div class="search-container">
-      <%= form_tag("/search") do %>
-        <%= text_field_tag(:q,)%>
-      <% end %>
-      <div></div>
+      <%= form_tag("/search", class: "search-form") do %>
+          <%= text_field_tag(:q, nil, placeholder: "Search for dog, cat or elephant")%>
+          <a href="" class="search-button">
+            <span><i class="fa fa-search"></i></span>
+          </a>
+       <% end %>
+      </div>
+      <p>
+        <span id="banner-typed-text"></span>
+      </p>
+
     </div>
   </div>
 </div>
@@ -24,6 +30,3 @@
   </div>
 
 <input type="text" data-provide='datepicker' >
-
-
-<div>Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

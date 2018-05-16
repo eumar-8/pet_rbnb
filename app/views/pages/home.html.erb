@@ -1,5 +1,39 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<h1>hola</h1>
+<div class="banner" style= "background-image:url(<%=image_path("dogs-background.jpg")%>);">
+  <div class="banner-content">
 
+   <h1> ALL THE PETS LOVE YOU CAN HANDLE</h1>
+   <!-- <button id="sweet-alert-demo" class="btn btn-primary">Click me!</button> -->
+    <div class="search-container">
+    <%= form_tag(pets_path, class: "search-form", method: :get) do %>
+        <%= text_field_tag(:animal, nil, placeholder: "Search for dog, cat or elephant")%>
+        <a href="" class="search-button">
+          <span id="sweet-alert-demo"><i class="fa fa-search"></i></span>
+        </a>
+     <% end %>
+    </div>
+    <p>
+      <span id="banner-typed-text"></span>
+    </p>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="card_design">
+    <% @pets.each do |pet| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
+<<<<<<< HEAD
+     </div>
+
+    <% end %>
+
+=======
+      </div>
+    <% end %>
+>>>>>>> 6c9c7f4e492945afb6a28db95d8eede4983ef595
+    </div>
+  </div>
+</div>
 

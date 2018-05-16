@@ -21,3 +21,8 @@ user2 = User.create(email: "eugenia@dc.com", password: "123456", name: "eugenia"
 pet2 = Pet.new(name: "michifu", price: "200", species: "cat", age: 1, description: "Super playful cat")
 pet2.user = user2
 pet2.save
+
+user3 = User.create(email: "eugenia@dc.com", password: "123456", name: "eugenia", location: "Bogota")
+pet3 = Pet.new(name: "caremico", species: "fish", age: 1, description: "Super ugly but nice")
+pet3.user = user2
+pet3.save

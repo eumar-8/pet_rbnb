@@ -10,4 +10,7 @@ class Pet < ApplicationRecord
 
   validates :species, presence: true, inclusion: {in: %w(cat dog bird elephant fish hamster giraffe monkey snake spider)}
 
+  def self.categories
+    %w(cat dog elephant fish hamster giraffe monkey snake spider)
+  end
 end
