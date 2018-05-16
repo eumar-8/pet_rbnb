@@ -20,12 +20,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="card_design">
     <% @pets.each do |pet| %>
       <div class="col-xs-12 col-sm-4">
         <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
       </div>
     <% end %>
-    </div>
-  </div>
-</div>
+  </div><!--  row -->
+</div> <!-- container -->
