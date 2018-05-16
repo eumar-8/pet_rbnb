@@ -25,5 +25,9 @@
         <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
       </div>
     <% end %>
-  </div><!--  row -->
-</div> <!-- container -->
+
+  </div>
+</div>
+
+<br><br>
+<%= link_to "Add your pet", new_pet_path, class: "btn btn-info" %>
