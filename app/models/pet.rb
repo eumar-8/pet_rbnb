@@ -8,6 +8,6 @@ class Pet < ApplicationRecord
   validates :age, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 200 }
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 0 }
 
-  validates :species, presence: true, inclusion: {in: %w(cat dog elephant fish hamster giraffe monkey snake spider)}
+  validates :species, presence: true, inclusion: {in: %w(cat dog bird elephant fish hamster giraffe monkey snake spider)}
 
 end
