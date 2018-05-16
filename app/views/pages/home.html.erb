@@ -2,11 +2,12 @@
   <div class="banner-content">
 
    <h1> ALL THE PETS LOVE YOU CAN HANDLE</h1>
+   <!-- <button id="sweet-alert-demo" class="btn btn-primary">Click me!</button> -->
     <div class="search-container">
-    <%= form_tag("/search", class: "search-form") do %>
-        <%= text_field_tag(:q, nil, placeholder: "Search for dog, cat or elephant")%>
+    <%= form_tag(pets_path, class: "search-form", method: :get) do %>
+        <%= text_field_tag(:animal, nil, placeholder: "Search for dog, cat or elephant")%>
         <a href="" class="search-button">
-          <span><i class="fa fa-search"></i></span>
+          <span id="sweet-alert-demo"><i class="fa fa-search"></i></span>
         </a>
      <% end %>
     </div>
@@ -23,8 +24,10 @@
     <% @pets.each do |pet| %>
       <div class="col-xs-12 col-sm-4">
         <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
-      </div>
+     </div>
+
     <% end %>
+
     </div>
   </div>
 </div>
