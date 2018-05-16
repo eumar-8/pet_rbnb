@@ -1,6 +1,11 @@
 <div class="card">
+  <% if pet.photo? %>
+  <div class="card-header" style="background-image: url(<%= image_path(pet.photo) %>);">
+  </div>
+  <% else %>
   <div class="card-header" style="background-image: url(<%= image_path("monkey.jpg") %>);">
   </div>
+  <% end %>
 
   <div class="card-content">
     <p><%= link_to pet.name, pet_path(pet), class: "card-link" %></p>
