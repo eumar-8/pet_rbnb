@@ -1,3 +1,6 @@
+<div>
+  <%= cl_image_tag current_user.photo_url, height: 300, width: 400, crop: :fill %>
+</div>
 <p>
   email:
   <%= current_user.email %>
@@ -10,5 +13,6 @@
   location:
   <%= current_user.location %>
 </p>
+
 
 

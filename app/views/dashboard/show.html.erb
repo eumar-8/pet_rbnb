@@ -1,14 +1,18 @@
-<h1>Dashboard</h1>
-<p>Find me in app/views/dashboard/show.html.erb</p>
+<div class="container dashboard">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="text-center">Dashboard</h1>
+    </div>
 
+      <% @user.bookings.each do |booking|%>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= booking.pet.name %>
+        <%= booking.pet.species %>
+        <br>
+        From: <%= booking.date_from %><br>
+        To: <%= booking.date_to %>
+        </div>
+      <% end %>
+  </div>
+</div>
 
-
-<% @user.bookings.each do |booking|%>
-  <%= booking.pet.name %>
-  <%= booking.pet.species %>
-<br>
-  From: <%= booking.date_from %><br>
-  To: <%= booking.date_to %>
-
-  <br><br>
-<% end %>
