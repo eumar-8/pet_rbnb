@@ -1,3 +1,61 @@
 .dashboard{
   min-height: 81vh;
 }
+
+.dashboard-content{
+     background-color: #b4c2b4;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 16px;
+    padding-left: 11px;
+}
+
+.dashboard-card {
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin-bottom: 20px;
+}
+.dashboard-card-user {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.dashboard-card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.dashboard-card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.dashboard-card-description h2 {
+  font-size: 24px;
+}
+.dashboard-card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+.dashboard-card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.dashboard-card-link:hover {
+  opacity: 0.1;
+}

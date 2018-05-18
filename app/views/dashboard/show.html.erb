@@ -1,18 +1,26 @@
-<div class="container dashboard">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1 class="text-center">Dashboard</h1>
-    </div>
-
-      <% @user.bookings.each do |booking|%>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <%= booking.pet.name %>
-        <%= booking.pet.species %>
-        <br>
-        From: <%= booking.date_from %><br>
-        To: <%= booking.date_to %>
+<div class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="text-center col-xs-12">
+        <h1>My bookings</h1>
+      </div>
+       <% @user.bookings.each do |booking|%>
+        <div class="col-xs-12 col-sm-4">
+          <div class="dashboard-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path booking.pet.photo %>');">
+            <div class="dashboard-card-category"><%= booking.pet.species %></div>
+            <div class="dashboard-card-description">
+              <h2><%= booking.pet.name %></h2>
+              <p>
+                <%= "#{booking.pet.price} DKK -
+                #{booking.date_from.strftime("%b %d, %Y")} -
+                #{booking.date_to.strftime("%b %d, %Y")}" %>
+              </p>
+            </div>
+            <img class="dashboard-card-user" src="<%= cl_image_path booking.pet.user.photo %>">
+            <a class="dashboard-card-link" href="#" ></a>
+          </div>
         </div>
       <% end %>
+    </div>
   </div>
 </div>
-

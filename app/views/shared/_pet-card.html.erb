@@ -1,4 +1,4 @@
-<div class="card">
+<div class="home-card">
   <% if pet.photo? %>
   <div class="card-header" style="background-image: url(<%= image_path(pet.photo) %>);">
   </div>
@@ -12,7 +12,8 @@
     <p><%=pet.description%></p>
 
     <div class="card-user-details">
-      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-large"/>
+      <!-- <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-large"/> -->
+      <%= image_tag pet.user.photo, class: "avatar-large" %>
       <div class= "card-user-content">
         <p><%=pet.user.name%></p>
         <p><%=pet.user.location%></p>

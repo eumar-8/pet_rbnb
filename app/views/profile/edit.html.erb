@@ -1,3 +1,4 @@
+<div class="container">
 <%= simple_form_for current_user, url: profile_path(current_user) do |f| %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
@@ -7,3 +8,4 @@
   <%= f.button :submit %>
 
 <% end %>
+</div>
