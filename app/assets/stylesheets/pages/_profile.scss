@@ -1,0 +1,26 @@
+.profile-wrapper{
+  min-height: 75vh;
+  margin: 40px 0 0;
+  text-align: center;
+ }
+
+ .profile-photo{
+  background-position: center;
+  background-size: cover !important;
+  height: 246px;
+  width: 353px;
+
+ }
+
+.photo-centerer{
+  display: flex;
+  justify-content: center;
+}
+.profile-data{
+  background-color: #8b7272;
+  margin-top: 20px;
+}
+.profile-text{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,31 @@
+<div class="profile-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="photo-centerer">
+        <% if current_user.photo? %>
+          <div class="profile-photo" style="background-image: url( <%=current_user.photo_url%>);"></div>
+        <% else %>
+          <div class="profile-photo" style="background-image: url(<%= image_path("profile.jpg") %>);"></div>
+        <% end %>
+        </div>
+        <div class="profile-data">
+          <div class="profile-text">
+          <p>
+             <strong>email:</strong>
+            <%= current_user.email %>
+          </p>
+          <p>
+            <strong>name:</strong>
+            <%= current_user.name %>
+          </p>
+          <p>
+            <strong>location:</strong>
+            <%= current_user.location %>
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

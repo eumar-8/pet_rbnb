@@ -1,10 +1,23 @@
-<h1>Pets Index</h1>
+<h1 class="text-center">we found those <%= params[:animal] %></h1>
 <div class="container">
   <div class="row">
+   <div class="col-xs-6">
     <% @pets.each do |pet| %>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-xs-12 col-sm-6">
         <%= render partial: 'shared/pet-card', locals: { pet: pet } %>
       </div>
     <% end %>
   </div>
-</div>
+  <div>
+    <div class="text-center">
+      <div
+        id="map"
+        style="width: 50%;
+        height: 600px;
+        margin-top: 24px;"
+        data-markers="<%= @markers.to_json %>"
+      ></div>
+    </div>
+  </div>
+  </div> <!-- clos row -->
+</div><!-- close container -->

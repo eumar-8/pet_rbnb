@@ -10,6 +10,9 @@ class Pet < ApplicationRecord
 
   validates :species, presence: true, inclusion: {in: %w(cat dog bird elephant fish hamster giraffe monkey snake spider)}
 
+  # geocoded_by :user.location
+  # after_validation :geocode, if: :will_save_change_to_location?
+
   def self.categories
     %w(cat dog elephant fish hamster giraffe monkey snake spider)
   end

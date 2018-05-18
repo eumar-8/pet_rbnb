@@ -5,6 +5,6 @@ class PagesController < ApplicationController
     @pets = Pet.all.limit(6)
   end
 
-  def design
+  def desig
   end
 end
